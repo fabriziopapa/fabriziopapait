@@ -1,0 +1,45 @@
+CONTABILITÀ ACCRUAL PER LA PUBBLICA AMMINISTRAZIONE
+Sintesi operativa aggiornata al 2026 — Fabrizio Papa
+Estratto: Premessa, Mappa rapida, Capitolo 1 (7,9% dell'opera)
+
+PREMESSA
+
+Questa guida non sostituisce gli standard ufficiali, ma li organizza in un unico testo coerente, orientato all'uso operativo. L'obiettivo è evitare la consultazione continua di decine di PDF separati e offrire una vista unificata della logica accrual applicata alle amministrazioni pubbliche.
+
+Come usare il documento. Per capire la logica generale: leggi prima i capitoli su bilancio, politiche contabili, criteri di classificazione e raccordi tra stato patrimoniale, conto economico e nota integrativa. Per risolvere un caso pratico: vai al capitolo dello specifico ITAS e consulta le sezioni "Nucleo operativo", "Rilevazione e valutazione" ed "Errori ricorrenti". Per ripassare velocemente: usa le tabelle di sintesi finali e i box "Da ricordare".
+
+Taglio editoriale. La guida privilegia i passaggi che più spesso generano dubbi operativi: definizioni, ambito, momento di rilevazione, criteri di valutazione iniziale e successiva, scritture tipiche, snodi di nota integrativa ed errori ricorrenti. Il taglio è sintetico, ma ogni capitolo conserva le principali articolazioni delle linee guida, così da offrire un supporto rapido senza sacrificare i contenuti essenziali.
+
+MAPPA RAPIDA DELLA CONTABILITÀ ACCRUAL ITAS
+
+Idea di fondo. La contabilità accrual guarda ai fatti economici quando maturano, non solo quando si manifestano finanziariamente. Il sistema ITAS chiede quindi di rispondere a quattro domande in sequenza:
+1. il fatto genera un'attività, una passività, un ricavo/provento o un costo/onere?
+2. quando nasce il diritto o l'obbligazione?
+3. come va valutato l'elemento: costo storico, valore corrente, costo ammortizzato, valore attuale, costo di sostituzione, valore netto di realizzo?
+4. dove si rappresenta l'effetto: stato patrimoniale, conto economico, rendiconto finanziario, nota integrativa?
+
+Schema mentale unico.
+Che cosa è accaduto? — Operazione di scambio, non di scambio, finanziaria, istituzionale, valutativa — ITAS 1, 2, 9, 18.
+Quando rilevo? — Trasferimento di rischi e benefici, maturazione del diritto, nascita dell'obbligo, competenza economica — ITAS 4, 5, 7, 9, 10, 15, 16, 17, 18.
+Come valuto? — Costo, fair/current value, costo di sostituzione, valore netto di realizzo, valore d'uso, costo ammortizzato — ITAS 3, 4, 5, 8, 10, 11, 14.
+Come presento? — Corrente/non corrente, CE operativo/finanziario/straordinario, disclosure in nota integrativa — ITAS 1 e standard specifici.
+
+Regole trasversali da non dimenticare. Prevalenza della sostanza sulla forma: decisiva per leasing, concessioni, partecipazioni, vendita e retrolocazione. Competenza economica: decisiva per ratei, risconti, interessi, servizi pluriperiodali, maxi-canoni, prestazioni sociali, TFR. Classificazione corrente/non corrente: decisiva per crediti, debiti, fondi, rimanenze, strumenti finanziari. Informativa: ogni standard richiede disclosure specifiche in nota integrativa; non è un allegato residuale ma parte del bilancio.
+
+CAPITOLO 1 — ITAS 1: COMPOSIZIONE E SCHEMI DEL BILANCIO DI ESERCIZIO
+
+Finalità. ITAS 1 definisce la struttura del bilancio di esercizio e le regole di presentazione delle principali grandezze economico-patrimoniali. È lo standard "di impianto" che lega stato patrimoniale, conto economico, rendiconto finanziario e nota integrativa.
+
+Nucleo operativo. Il bilancio di esercizio comprende, in logica unitaria, stato patrimoniale, conto economico, rendiconto finanziario e nota integrativa. La sezione del passivo dello stato patrimoniale include passività e patrimonio netto. Il periodo amministrativo di riferimento del bilancio è in via ordinaria di dodici mesi. Le voci sono presentate distinguendo corrente/non corrente secondo la natura e l'orizzonte di realizzo o regolazione. Le passività non correnti sono quelle che non si estinguono nel normale ciclo operativo, non sono detenute per essere negoziate e non sono regolate entro i dodici mesi successivi.
+
+Conto economico: aree gestionali. Gestione operativa: attività istituzionale e gestione ordinaria. Gestione finanziaria: interessi, strumenti finanziari, componenti connesse al finanziamento e alla gestione delle risorse finanziarie. Gestione straordinaria: area residuale molto limitata; non coincide con "tutto ciò che non è operativo".
+
+Da ricordare. Negli ITAS la gestione straordinaria è stretta: non accoglie genericamente tutto il non operativo. Le correzioni di errori non rilevanti possono transitare qui, mentre i risultati su strumenti finanziari appartengono alla gestione finanziaria.
+
+Patrimonio netto e riserve. Le riserve possono essere disponibili o indisponibili. Le riserve indisponibili sono utilizzabili secondo lo scopo specifico per cui sono state costituite; non sono liberamente distribuibili o assorbibili.
+
+Nota integrativa. La nota integrativa: espone i criteri di valutazione adottati; illustra le ipotesi di stima e i fattori d'incertezza rilevanti per attività e passività; integra gli schemi con informazioni qualitative e quantitative utili agli utilizzatori; spiega deroghe, cambiamenti, effetti rilevanti e informazioni specifiche richieste dagli standard.
+
+Errori ricorrenti. Pensare che il passivo di stato patrimoniale contenga solo debiti; trattare la nota integrativa come allegato descrittivo "secondario"; confondere gestione finanziaria e gestione straordinaria; dimenticare che i beni in leasing finanziario sono rappresentati in stato patrimoniale.
+
+— Fine dell'estratto. L'opera completa (93 pagine, ITAS 1-18, appendici e schede lampo) è distribuita da Amazon in formato Kindle. —

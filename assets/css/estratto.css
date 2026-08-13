@@ -1,0 +1,254 @@
+/* ============================================================
+   ESTRATTO — /assets/css/estratto.css
+   Frontespizio esteso di «Contabilità Accrual per la PA»
+   Palette e tipografia del sito; nessuno stile inline (CSP).
+   ============================================================ */
+
+:root{
+  --ink:#12100E;
+  --ink-2:#1B1815;
+  --brass:#C9A96A;
+  --steel:#7C9BC7;
+  --ruby:#A0433A;
+  --ivory:#EDE6D6;
+  --line:rgba(201,169,106,.18);
+  --testo:#D8D0BF;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--ink);
+  color:var(--testo);
+  font-family:'Manrope',system-ui,sans-serif;
+  font-weight:300;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brass)}
+
+/* ── barra alta ── */
+.e-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:1rem;flex-wrap:wrap;
+  padding:1.1rem clamp(1rem,4vw,3rem);
+  border-bottom:1px solid var(--line);
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.16em;
+}
+.e-nav a{text-decoration:none;color:var(--brass)}
+.e-nav a:hover,.e-nav a:focus-visible{color:var(--ivory)}
+.e-nav-tag{opacity:.55}
+
+/* ── frontespizio ── */
+.frontespizio{
+  text-align:center;
+  padding:clamp(3rem,9vh,6rem) 1.25rem clamp(2.5rem,7vh,4.5rem);
+  border-bottom:1px solid var(--line);
+}
+.occhiello{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--steel);margin-bottom:1.6rem;
+}
+.frontespizio h1{
+  font-family:'Instrument Serif',serif;
+  font-weight:400;
+  font-size:clamp(2rem,5.4vw,3.4rem);
+  line-height:1.14;
+  color:var(--ivory);
+  letter-spacing:.01em;
+}
+.sottotitolo{
+  font-family:'Instrument Serif',serif;
+  font-style:italic;
+  font-size:clamp(1.05rem,2.4vw,1.35rem);
+  color:var(--brass);
+  margin-top:.9rem;
+}
+.autore{
+  margin-top:2rem;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-size:.8rem;
+  color:var(--ivory);
+}
+.e-colophon{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.66rem;letter-spacing:.2em;
+  color:var(--brass);opacity:.75;
+  margin-top:1rem;
+}
+
+/* ── colonna di lettura ── */
+.lettura{
+  max-width:41rem;
+  margin:0 auto;
+  padding:clamp(2rem,6vh,4rem) 1.25rem 3rem;
+}
+.lettura section + section{
+  margin-top:3.2rem;
+  padding-top:3rem;
+  border-top:1px solid var(--line);
+}
+.lettura h2{
+  font-family:'Instrument Serif',serif;
+  font-weight:400;
+  font-size:clamp(1.5rem,3.4vw,2rem);
+  color:var(--ivory);
+  line-height:1.25;
+  margin-bottom:1.4rem;
+}
+.cap-num{
+  display:block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--steel);
+  margin-bottom:.6rem;
+}
+.lettura h3{
+  font-weight:600;
+  font-size:.82rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin:2rem 0 .8rem;
+}
+.lettura p{margin-bottom:1rem}
+.lettura strong{font-weight:600;color:var(--ivory)}
+.lettura ul,.lettura ol{
+  margin:0 0 1rem 1.2rem;
+}
+.lettura li{margin-bottom:.55rem}
+.lettura li::marker{color:var(--brass)}
+
+/* le quattro domande */
+.quattro-domande{
+  counter-reset:dom;
+  list-style:none;
+  margin-left:0;
+}
+.quattro-domande li{
+  counter-increment:dom;
+  position:relative;
+  padding-left:2.4rem;
+  margin-bottom:.8rem;
+}
+.quattro-domande li::before{
+  content:counter(dom);
+  position:absolute;left:0;top:.1em;
+  width:1.55rem;height:1.55rem;
+  border:1px solid var(--brass);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;color:var(--brass);
+}
+
+/* riquadri (le tcolorbox del libro, rese in casa) */
+.riquadro{
+  border:1px solid var(--line);
+  border-left:2px solid var(--brass);
+  padding:1.1rem 1.3rem;
+  margin:1.4rem 0;
+  background:var(--ink-2);
+}
+.riquadro h3{margin:0 0 .7rem;font-size:.72rem}
+.riquadro p:last-child,.riquadro ul:last-child{margin-bottom:0}
+.riquadro-nota{border-left-color:var(--steel)}
+.riquadro-nota h3{color:var(--steel)}
+.riquadro-chiave{border-left-color:var(--ruby)}
+.riquadro-chiave h3{color:var(--ruby)}
+
+/* tabella schema mentale */
+.schema{
+  width:100%;
+  border-collapse:collapse;
+  margin:1.2rem 0 1.6rem;
+  font-size:.86rem;
+}
+.schema th{
+  text-align:left;
+  font-weight:600;
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--brass);
+  padding:.55rem .7rem .55rem 0;
+  border-bottom:1px solid var(--brass);
+}
+.schema td{
+  vertical-align:top;
+  padding:.7rem .7rem .7rem 0;
+  border-bottom:1px solid var(--line);
+}
+.schema td:first-child{color:var(--ivory);font-weight:600;white-space:nowrap}
+.schema .std{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.06em;
+  color:var(--steel);
+  white-space:normal;
+}
+@media (max-width:620px){
+  .schema thead{display:none}
+  .schema tr{display:block;padding:.8rem 0;border-bottom:1px solid var(--line)}
+  .schema td{display:block;border:none;padding:.15rem 0}
+  .schema td:first-child{white-space:normal}
+}
+
+/* ── chiusa ── */
+.fine{
+  margin-top:3.5rem;
+  padding-top:2.5rem;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+.fine-segno{color:var(--brass);font-size:1.4rem;margin-bottom:1.2rem}
+.fine-testo{
+  font-style:italic;
+  font-family:'Instrument Serif',serif;
+  font-size:1.05rem;
+  color:var(--testo);
+  max-width:33rem;margin:0 auto 2rem;
+}
+.btn-amazon{
+  display:inline-block;
+  border:1px solid var(--brass);
+  color:var(--brass);
+  text-decoration:none;
+  padding:.85rem 1.8rem;
+  font-weight:600;
+  font-size:.8rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  transition:background .25s,color .25s;
+}
+.btn-amazon:hover,.btn-amazon:focus-visible{
+  background:var(--brass);
+  color:var(--ink);
+  outline:none;
+}
+.ritorno{
+  display:block;
+  margin-top:1.6rem;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.14em;
+  text-decoration:none;
+}
+.ritorno:hover,.ritorno:focus-visible{color:var(--ivory)}
+
+/* ── piede ── */
+.e-fondello{
+  border-top:1px solid var(--line);
+  text-align:center;
+  padding:2.2rem 1.25rem 3rem;
+  font-size:.72rem;
+  opacity:.75;
+}
+.e-fondello p{margin-bottom:.5rem}
+.impronta{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.62rem;
+  letter-spacing:.05em;
+  word-break:break-all;
+}

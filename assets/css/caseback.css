@@ -1,0 +1,66 @@
+  :root{
+    --antracite:#17150F;
+    --piastra-a:#2E2B24;
+    --piastra-b:#211F19;
+    --ottone:#C8A96A;
+    --ottone-caldo:#B99656;
+    --acciaio-blu:#4A6FA5;
+    --avorio:#EDE6D6;
+    --incisione:#121009;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    background:radial-gradient(ellipse 120% 90% at 50% 20%, #1E1B15 0%, var(--antracite) 55%, #0F0D09 100%);
+    color:var(--avorio);
+    font-family:'Manrope',system-ui,sans-serif;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    min-height:100vh;padding:2rem 1rem;
+    overflow-x:hidden;
+  }
+
+  .scena{perspective:1400px}
+  .fondello{
+    width:min(88vw,560px);height:min(88vw,560px);
+    filter:drop-shadow(0 26px 60px rgba(0,0,0,.65)) drop-shadow(0 4px 12px rgba(0,0,0,.5));
+    transform-style:preserve-3d;
+    animation:capovolgi 1.2s cubic-bezier(.22,.9,.3,1) backwards;
+    will-change:transform;
+  }
+  @keyframes capovolgi{
+    from{transform:rotateY(-180deg) scale(.92);opacity:0}
+    to{transform:rotateY(0) scale(1);opacity:1}
+  }
+
+  .didascalia{
+    margin-top:2.4rem;text-align:center;
+    font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;
+    color:color-mix(in srgb, var(--avorio) 45%, transparent);
+    font-weight:300;
+  }
+  .didascalia em{
+    font-family:'Instrument Serif',serif;font-style:italic;
+    text-transform:none;letter-spacing:.04em;font-size:1rem;
+    color:var(--ottone);
+  }
+
+  nav{
+    margin-top:1.6rem;display:flex;gap:2.2rem;flex-wrap:wrap;justify-content:center;
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  }
+  nav a{
+    color:color-mix(in srgb, var(--avorio) 60%, transparent);
+    text-decoration:none;border-bottom:1px solid transparent;
+    padding-bottom:2px;transition:color .25s,border-color .25s;
+  }
+  nav a:hover,nav a:focus-visible{color:var(--ottone);border-color:var(--ottone-caldo);outline:none}
+  nav a:focus-visible{outline:1px dashed var(--ottone);outline-offset:4px}
+
+  svg text{user-select:none}
+  svg a{cursor:pointer}
+  svg a text{transition:fill .25s}
+  svg a:hover text,svg a:focus text{fill:var(--avorio)}
+
+  @media (prefers-reduced-motion: reduce){
+    .fondello{animation:none}
+  }

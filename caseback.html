@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fondello — Fabrizio Papa</title>
+<!--
+  FONDELLO / CASEBACK — pagina easter egg
+  ═══════════════════════════════════════
+  Deploy (3 file — CSP senza 'unsafe-inline', nessun inline style/script):
+    /caseback.html                 -> public_html/
+    /assets/css/caseback.css       -> public_html/assets/css/
+    /assets/js/caseback.js         -> public_html/assets/js/
+
+  Nessun segnaposto residuo: serie 07051978, fingerprint A3F5…1CA1,
+  security.txt e pgp.asc già in produzione.
+
+  Aggancio dalla homepage (facoltativo, easter egg "capovolgi l'orologio"):
+  aggiungere al movimento SVG in index.html:
+    movimento.addEventListener('dblclick', () => {
+      document.body.style.transition = 'transform .6s ease';
+      document.body.style.transform = 'rotateY(90deg)';
+      setTimeout(() => location.href = '/caseback.html', 550);
+    });
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/caseback.css">
+</head>
+<body>
+
+<main class="scena" aria-label="Fondello del sito">
+  <svg class="fondello" id="cassa" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" role="img"
+       aria-label="Fondello inciso: Fabrizio Papa, Napoli. Calibro FP-2026, carica manuale, zero framework. Punzoni: DNSSEC, SPF, DKIM, DMARC, Turnstile.">
+    <defs>
+      <radialGradient id="metallo" cx="38%" cy="30%" r="85%">
+        <stop offset="0%"  stop-color="#3A362D"/>
+        <stop offset="45%" stop-color="#2E2B24"/>
+        <stop offset="100%" stop-color="#1D1B15"/>
+      </radialGradient>
+      <radialGradient id="riflesso" cx="35%" cy="25%" r="60%">
+        <stop offset="0%" stop-color="#FFF" stop-opacity="0.10"/>
+        <stop offset="60%" stop-color="#FFF" stop-opacity="0.02"/>
+        <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="vite" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#4A463B"/>
+        <stop offset="100%" stop-color="#26231C"/>
+      </linearGradient>
+      <!-- archi per il testo circolare: anello unico a r=248, tra viti (r≈261 bordo interno) e ghiera incisioni (r=234) -->
+      <path id="arcoSup" d="M 72,320 A 248,248 0 0 1 568,320" fill="none"/>
+      <path id="arcoInf" d="M 72,320 A 248,248 0 0 0 568,320" fill="none"/>
+    </defs>
+
+    <!-- bordo zigrinato (presa per l'apertura) -->
+    <circle cx="320" cy="320" r="314" fill="#14120C"/>
+    <circle cx="320" cy="320" r="308" fill="none" stroke="#3C382E" stroke-width="10"
+            stroke-dasharray="3.5 4.2" opacity="0.9"/>
+
+    <!-- piastra -->
+    <circle cx="320" cy="320" r="298" fill="url(#metallo)" stroke="#0E0C08" stroke-width="2"/>
+    <circle cx="320" cy="320" r="298" fill="url(#riflesso)"/>
+
+    <!-- spazzolatura circolare -->
+    <g fill="none" opacity="0.9">
+      <circle cx="320" cy="320" r="272" stroke="#000" stroke-opacity="0.14" stroke-width="1"/>
+      <circle cx="320" cy="320" r="252" stroke="#FFF" stroke-opacity="0.025" stroke-width="1"/>
+      <circle cx="320" cy="320" r="226" stroke="#000" stroke-opacity="0.12" stroke-width="1"/>
+      <circle cx="320" cy="320" r="198" stroke="#FFF" stroke-opacity="0.02"  stroke-width="1"/>
+      <circle cx="320" cy="320" r="170" stroke="#000" stroke-opacity="0.10" stroke-width="1"/>
+      <circle cx="320" cy="320" r="142" stroke="#FFF" stroke-opacity="0.02"  stroke-width="1"/>
+      <circle cx="320" cy="320" r="112" stroke="#000" stroke-opacity="0.10" stroke-width="1"/>
+      <circle cx="320" cy="320" r="82"  stroke="#FFF" stroke-opacity="0.02"  stroke-width="1"/>
+    </g>
+
+    <!-- ghiera dell'incisione perimetrale -->
+    <circle cx="320" cy="320" r="282" fill="none" stroke="#0F0D08" stroke-width="1.4"/>
+    <circle cx="320" cy="320" r="234" fill="none" stroke="#0F0D08" stroke-width="1.2"/>
+
+    <!-- viti -->
+    <g id="viti">
+      <g transform="translate(320 47)"><circle r="12" fill="url(#vite)" stroke="#0C0A06" stroke-width="1.5"/><line x1="-7" y1="0" x2="7" y2="0" stroke="#0C0A06" stroke-width="2.4" transform="rotate(23)"/></g>
+      <g transform="translate(556.4 183.5)"><circle r="12" fill="url(#vite)" stroke="#0C0A06" stroke-width="1.5"/><line x1="-7" y1="0" x2="7" y2="0" stroke="#0C0A06" stroke-width="2.4" transform="rotate(101)"/></g>
+      <g transform="translate(556.4 456.5)"><circle r="12" fill="url(#vite)" stroke="#0C0A06" stroke-width="1.5"/><line x1="-7" y1="0" x2="7" y2="0" stroke="#0C0A06" stroke-width="2.4" transform="rotate(-40)"/></g>
+      <g transform="translate(320 593)"><circle r="12" fill="url(#vite)" stroke="#0C0A06" stroke-width="1.5"/><line x1="-7" y1="0" x2="7" y2="0" stroke="#0C0A06" stroke-width="2.4" transform="rotate(74)"/></g>
+      <g transform="translate(83.6 456.5)"><circle r="12" fill="url(#vite)" stroke="#0C0A06" stroke-width="1.5"/><line x1="-7" y1="0" x2="7" y2="0" stroke="#0C0A06" stroke-width="2.4" transform="rotate(150)"/></g>
+      <g transform="translate(83.6 183.5)"><circle r="12" fill="url(#vite)" stroke="#0C0A06" stroke-width="1.5"/><line x1="-7" y1="0" x2="7" y2="0" stroke="#0C0A06" stroke-width="2.4" transform="rotate(-12)"/></g>
+    </g>
+
+    <!-- incisione perimetrale -->
+    <text font-family="'Manrope',sans-serif" font-size="15" font-weight="600" letter-spacing="3.5" fill="#C8A96A" opacity="0.92">
+      <textPath href="#arcoSup" startOffset="50%" text-anchor="middle">FABRIZIOPAPA.IT&#160;&#160;·&#160;&#160;COSTRUITO A MANO A NAPOLI&#160;&#160;·&#160;&#160;MMXXVI</textPath>
+    </text>
+    <text font-family="'JetBrains Mono',monospace" font-size="12.5" letter-spacing="2.5" fill="#B99656" opacity="0.85">
+      <textPath href="#arcoInf" startOffset="50%" text-anchor="middle">DNSSEC ECDSA P-256 · KEY TAG 2371 · TLS 1.3 · HSTS</textPath>
+    </text>
+
+    <!-- ═══ incisione centrale (ombra chiara sotto = effetto cesello) ═══ -->
+    <g text-anchor="middle">
+
+      <!-- nome -->
+      <text x="320" y="196.5" font-family="'Instrument Serif',serif" font-size="41" letter-spacing="7" fill="#FFF" opacity="0.06">FABRIZIO PAPA</text>
+      <text x="320" y="195"   font-family="'Instrument Serif',serif" font-size="41" letter-spacing="7" fill="#C8A96A">FABRIZIO PAPA</text>
+
+      <text x="320" y="224" font-family="'Manrope',sans-serif" font-size="12.5" font-weight="400" letter-spacing="6" fill="#8F8468">NAPOLI · ITALIA</text>
+
+      <line x1="228" y1="248" x2="412" y2="248" stroke="#0F0D08" stroke-width="1.4"/>
+      <line x1="228" y1="249.4" x2="412" y2="249.4" stroke="#FFF" stroke-width="0.6" opacity="0.05"/>
+
+      <!-- calibro -->
+      <text x="320" y="281" font-family="'JetBrains Mono',monospace" font-size="14.5" letter-spacing="2.4" fill="#B9AE8F">CAL. FP-2026 · CARICA MANUALE</text>
+      <text x="320" y="305" font-family="'JetBrains Mono',monospace" font-size="13"   letter-spacing="2.2" fill="#8F8468">ZERO FRAMEWORK · UN SOLO FILE</text>
+
+      <!-- punzoni -->
+      <g id="punzoni" transform="translate(320 341)" font-family="'JetBrains Mono',monospace" font-size="10.5" letter-spacing="1">
+        <g transform="translate(-136 0)">
+          <rect x="-27" y="-13" width="54" height="26" rx="4" fill="none" stroke="#C8A96A" stroke-width="1.1" opacity="0.8"/>
+          <text y="4" fill="#C8A96A">DS</text>
+        </g>
+        <g transform="translate(-68 0)">
+          <rect x="-27" y="-13" width="54" height="26" rx="4" fill="none" stroke="#C8A96A" stroke-width="1.1" opacity="0.8"/>
+          <text y="4" fill="#C8A96A">SPF</text>
+        </g>
+        <g transform="translate(0 0)">
+          <rect x="-27" y="-13" width="54" height="26" rx="4" fill="none" stroke="#C8A96A" stroke-width="1.1" opacity="0.8"/>
+          <text y="4" fill="#C8A96A">DKIM</text>
+        </g>
+        <g transform="translate(68 0)">
+          <rect x="-27" y="-13" width="54" height="26" rx="4" fill="none" stroke="#C8A96A" stroke-width="1.1" opacity="0.8"/>
+          <text y="4" fill="#C8A96A">DMARC</text>
+        </g>
+        <g transform="translate(136 0)">
+          <rect x="-27" y="-13" width="54" height="26" rx="4" fill="none" stroke="#4A6FA5" stroke-width="1.1" opacity="0.9"/>
+          <text y="4" fill="#4A6FA5">TS</text>
+        </g>
+      </g>
+
+      <!-- serie e impermeabilità -->
+      <text x="320" y="393" font-family="'JetBrains Mono',monospace" font-size="14" letter-spacing="2.6" fill="#B9AE8F">N° SERIE <tspan fill="#C8A96A" font-weight="500" id="serie">07051978</tspan></text>
+      <text x="320" y="417" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="2" fill="#8F8468">IMPERMEABILE — CSP · X-FRAME · REFERRER</text>
+
+      <line x1="228" y1="441" x2="412" y2="441" stroke="#0F0D08" stroke-width="1.4"/>
+      <line x1="228" y1="442.4" x2="412" y2="442.4" stroke="#FFF" stroke-width="0.6" opacity="0.05"/>
+
+      <!-- PGP + security.txt -->
+      <text x="320" y="466" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="2" fill="#8F8468">PGP <tspan fill="#B9AE8F">A3F5 7B8E 9920 3746 1B3F</tspan></text>
+      <text x="320" y="486" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="2" fill="#B9AE8F">A2BC 1BEB 6C24 1E60 1CA1</text>
+      <a href="/.well-known/security.txt">
+        <text x="320" y="511" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="2.4" fill="#B99656" text-decoration="underline">security.txt</text>
+      </a>
+
+      <text x="320" y="528" font-family="'Instrument Serif',serif" font-style="italic" font-size="16" letter-spacing="1" fill="#6E6550">inciso, non stampato</text>
+    </g>
+  </svg>
+</main>
+
+<p class="didascalia">Fondello <em>— il retro di ogni quadrante onesto</em></p>
+
+<nav aria-label="Collegamenti fondello">
+  <a href="/">↺ TORNA AL QUADRANTE</a>
+  <a href="/pgp.asc">CHIAVE PGP</a>
+  <a href="/.well-known/security.txt">SECURITY.TXT</a>
+</nav>
+
+<script src="/assets/js/caseback.js" defer></script>
+</body>
+</html>

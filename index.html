@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fabrizio Papa — Ricercatore Indipendente & Developer</title>
+<meta name="description" content="Fabrizio Papa, Napoli. Costruisco sistemi per la pubblica amministrazione e restauro meccanismi che il tempo aveva fermato. Tra tecnologia, ricerca sull'IA e artigianato." />
+<meta name="author" content="Fabrizio Papa" />
+<meta property="og:title" content="Fabrizio Papa — Ricercatore Indipendente & Developer" />
+<meta property="og:description" content="Etica prima di tutto. Curiosità come carburante." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.fabriziopapa.it/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312100E'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23C9A96A' stroke-width='1.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23C9A96A'/%3E%3Cline x1='16' y1='16' x2='16' y2='8.5' stroke='%23C9A96A' stroke-width='1.2'/%3E%3Cline x1='16' y1='16' x2='21' y2='16' stroke='%237C9BC7' stroke-width='1.2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
+
+<!-- Inserisci Friendly Captcha -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/@friendlycaptcha/sdk@0.2.0/site.min.js" async defer></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@friendlycaptcha/sdk@0.2.0/site.compat.min.js" async defer></script>
+
+<link rel="stylesheet" href="/assets/css/style.css" />
+ 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.fabriziopapa.it/#fabrizio",
+      "name": "Fabrizio Papa",
+      "alternateName": "Nadin Shalev",
+      "url": "https://www.fabriziopapa.it/",
+      "jobTitle": "Ricercatore Indipendente & Developer",
+      "address": { "@type": "PostalAddress", "addressLocality": "Napoli", "addressCountry": "IT" },
+      "sameAs": [
+        "https://orcid.org/0009-0009-3320-293X",
+        "https://www.linkedin.com/in/papafabrizio/",
+        "https://github.com/fabriziopapa",
+        "https://music.apple.com/it/artist/nadin-shalev/1834424090",
+        "https://www.amazon.it/stores/Fabrizio-Papa/author/B0GWLP458Z"
+      ]
+    },
+    {
+      "@type": "Book",
+      "name": "Contabilità Accrual per la Pubblica Amministrazione: Sintesi operativa aggiornata al 2026",
+      "author": { "@id": "https://www.fabriziopapa.it/#fabrizio" },
+      "inLanguage": "it",
+      "numberOfPages": 93,
+      "datePublished": "2026-03-29",
+      "bookFormat": "https://schema.org/EBook",
+      "url": "https://www.amazon.it/stores/Fabrizio-Papa/author/B0GWLP458Z",
+      "workExample": "https://www.fabriziopapa.it/estratto-accrual.html"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Sedici chilometri di silenzio",
+      "byArtist": { "@id": "https://www.fabriziopapa.it/#fabrizio" },
+      "datePublished": "2025-08-16",
+      "duration": "PT4M13S",
+      "url": "https://music.apple.com/it/album/sedici-chilometri-di-silenzio/1834629332?i=1834629333"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Non riesco a venire",
+      "byArtist": { "@id": "https://www.fabriziopapa.it/#fabrizio" },
+      "datePublished": "2026-04-22",
+      "duration": "PT3M58S",
+      "url": "https://music.apple.com/it/album/non-riesco-a-venire/1895546745?i=6763895978"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Fabrizio Papa — inizio pagina">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="12" fill="none" stroke="var(--brass)" stroke-width="1.2"/>
+        <circle cx="16" cy="16" r="2.6" fill="var(--brass)"/>
+        <line x1="16" y1="16" x2="16" y2="7" stroke="var(--brass)" stroke-width="1.2"/>
+        <line x1="16" y1="16" x2="22" y2="16" stroke="var(--steel)" stroke-width="1.2"/>
+      </svg>
+      <span>Fabrizio&nbsp;Papa</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">Chi sono</a>
+      <a href="#work">Competenze</a>
+      <a href="#projects">Progetti</a>
+      <a href="#beyond">Oltre il codice</a>
+      <a href="#contact">Contatti</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Napoli · Ricercatore Indipendente &amp; Developer</span>
+      <h1>Fabrizio<br>Papa</h1>
+      <p class="lead">Etica prima di tutto. Curiosità come carburante.</p>
+      <p class="sub">Costruisco <strong>sistemi che devono funzionare davvero</strong> — e restauro meccanismi che il tempo aveva fermato. Tra pubblica amministrazione, ricerca sull'intelligenza artificiale e artigianato.</p>
+      <div class="cta-row">
+        <a href="#projects" class="btn btn-primary">I progetti</a>
+        <a href="#contact" class="btn btn-ghost">Parliamone</a>
+      </div>
+    </div>
+
+    <div aria-hidden="true">
+      <svg class="movement" viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img">
+        <!-- mainplate -->
+        <circle cx="220" cy="220" r="200" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <circle cx="220" cy="220" r="200" fill="none" stroke="var(--line)" stroke-width="14" stroke-dasharray="1 11" opacity=".5"/>
+
+        <!-- Gear A : large going wheel -->
+        <g class="gear gear-a">
+          <circle cx="150" cy="160" r="86" fill="none" stroke="var(--brass)" stroke-width="9" stroke-dasharray="4 9" opacity=".85"/>
+          <circle cx="150" cy="160" r="78" fill="none" stroke="var(--brass)" stroke-width="1.2" opacity=".6"/>
+          <g stroke="var(--brass)" stroke-width="1.4" opacity=".7">
+            <line x1="150" y1="160" x2="150" y2="86"/>
+            <line x1="150" y1="160" x2="220" y2="197"/>
+            <line x1="150" y1="160" x2="80"  y2="197"/>
+            <line x1="150" y1="160" x2="150" y2="234"/>
+            <line x1="150" y1="160" x2="205" y2="118"/>
+          </g>
+          <circle cx="150" cy="160" r="12" fill="var(--ink-2)" stroke="var(--brass)" stroke-width="1.4"/>
+          <circle cx="150" cy="160" r="4.4" fill="var(--ruby)"/>
+        </g>
+
+        <!-- Gear B : medium -->
+        <g class="gear gear-b">
+          <circle cx="292" cy="228" r="58" fill="none" stroke="var(--brass)" stroke-width="8" stroke-dasharray="3.5 8" opacity=".8"/>
+          <circle cx="292" cy="228" r="51" fill="none" stroke="var(--brass)" stroke-width="1" opacity=".55"/>
+          <g stroke="var(--brass)" stroke-width="1.3" opacity=".65">
+            <line x1="292" y1="228" x2="292" y2="178"/>
+            <line x1="292" y1="228" x2="335" y2="253"/>
+            <line x1="292" y1="228" x2="249" y2="253"/>
+          </g>
+          <circle cx="292" cy="228" r="9" fill="var(--ink-2)" stroke="var(--brass)" stroke-width="1.3"/>
+          <circle cx="292" cy="228" r="3.4" fill="var(--ruby)"/>
+        </g>
+
+        <!-- Gear C : small fast -->
+        <g class="gear gear-c">
+          <circle cx="300" cy="120" r="34" fill="none" stroke="var(--steel)" stroke-width="7" stroke-dasharray="3 6.5" opacity=".75"/>
+          <circle cx="300" cy="120" r="6" fill="var(--ink-2)" stroke="var(--steel)" stroke-width="1.2"/>
+          <circle cx="300" cy="120" r="2.6" fill="var(--ruby)"/>
+        </g>
+
+        <!-- Balance wheel : the heartbeat -->
+        <g class="balance">
+          <circle cx="180" cy="312" r="72" fill="none" stroke="var(--brass)" stroke-width="4.5" opacity=".9"/>
+          <circle cx="180" cy="312" r="72" fill="none" stroke="var(--brass)" stroke-width="1" opacity=".4"/>
+          <g stroke="var(--brass)" stroke-width="3" opacity=".85">
+            <line x1="108" y1="312" x2="252" y2="312"/>
+            <line x1="180" y1="240" x2="180" y2="384"/>
+          </g>
+          <!-- hairspring -->
+          <g transform="translate(180,312)" fill="none" stroke="var(--steel)" stroke-width="1.4" opacity=".9">
+            <path d="M 34 0 A 32 32 0 1 1 -30 0 A 28 28 0 1 1 26 0 A 24 24 0 1 1 -22 0 A 20 20 0 1 1 18 0 A 16 16 0 1 1 -14 0 A 12 12 0 1 1 10 0"/>
+          </g>
+          <circle cx="180" cy="312" r="7" fill="var(--ink-2)" stroke="var(--brass)" stroke-width="1.4"/>
+          <circle cx="180" cy="312" r="3" fill="var(--ruby)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ABOUT -->
+  <section class="band" id="about">
+    <div class="wrap">
+      <div class="band-head reveal">
+        <span class="eyebrow">Chi sono</span>
+        <h2>Precisione dell'ingegneria, sensibilità dell'artigianato.</h2>
+      </div>
+      <div class="about-grid reveal">
+        <div>
+          <p>Mi occupo di processi e dati nella pubblica amministrazione, dove ogni numero ha un peso reale sulla vita delle persone. Lavoro su sistemi di liquidazione retributiva, sull'integrazione con le piattaforme HR e sull'adozione dell'intelligenza artificiale in ambienti on-premise — sempre con un'attenzione ostinata alla correttezza, alla trasparenza e alla tutela dei dati.</p>
+          <p>Scrivo software pensato per durare: codice pulito, documentazione chiara, sicurezza e conformità pensate dall'inizio e non aggiunte alla fine.</p>
+        </div>
+        <div>
+          <p class="col-note">Fuori dallo schermo, la stessa cura la metto a un banco da orologiaio, su un palco o dietro uno strumento. Un movimento meccanico e un sistema informativo hanno la stessa etica: ogni parte fa il suo lavoro, e il meccanismo resta onesto solo se lo puoi vedere.</p>
+          <p class="col-note">Credo che la precisione e la cura non siano due mondi diversi. Sono lo stesso gesto, visto da due lati.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / COMPETENZE -->
+  <section class="band" id="work">
+    <div class="wrap">
+      <div class="band-head reveal">
+        <span class="eyebrow">Competenze</span>
+        <h2>Le funzioni del meccanismo.</h2>
+        <p>Quattro ambiti che si ingranano tra loro: ognuno muove gli altri.</p>
+      </div>
+      <div class="grid grid-4 reveal">
+        <div class="cell">
+          <span class="tag">PA · Payroll</span>
+          <h3>Sistemi per la PA</h3>
+          <p>Liquidazioni stipendiali variabili, integrazione con piattaforme HR e generazione di certificazioni. Software che deve essere corretto al centesimo, ogni mese.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">AI · Research</span>
+          <h3>IA on-premise</h3>
+          <p>Deployment di modelli linguistici in ambienti pubblici sovrani, a supporto dei processi decisionali strategici. Tema della mia ricerca magistrale.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Sec · Dev</span>
+          <h3>Sicurezza &amp; sviluppo</h3>
+          <p>Backend TypeScript/Fastify, frontend React, hardening di server e infrastrutture. Autenticazione forte, GDPR e resistenza all'esfiltrazione dei dati by design.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Data · Semantics</span>
+          <h3>Dati &amp; ontologie</h3>
+          <p>Trasparenza retributiva, web semantico (OWL, Turtle, SPARQL) e modellazione della conoscenza per rendere leggibili i dati della PA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="band" id="projects">
+    <div class="wrap">
+      <div class="band-head reveal">
+        <span class="eyebrow">Progetti</span>
+        <h2>Cose costruite, non solo pensate.</h2>
+      </div>
+      <div class="grid grid-4 reveal">
+        <div class="cell">
+          <span class="tag">React · Fastify · PostgreSQL</span>
+          <h3>Payroll Gang Suite</h3>
+          <p>Piattaforma per la gestione delle liquidazioni retributive: autenticazione a due fattori, logging degli accessi conforme al GDPR e controlli uomo-nel-ciclo sulle operazioni sensibili.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Ricerca · Tesi magistrale</span>
+          <h3>JANUS-OP</h3>
+          <p>Studio sull'uso di sistemi di intelligenza artificiale in ambiente on-premise a supporto delle decisioni strategiche nella pubblica amministrazione.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Web · Utility</span>
+          <h3>CSV → TXT</h3>
+          <p>Piccola utility per convertire file CSV in TXT, pronta per l'uso in batch. Semplice, veloce, senza fronzoli.</p>
+          <a class="more" href="https://converti-csv.pages.dev/" target="_blank" rel="noopener">Apri l'app</a>
+        </div>
+        <div class="cell">
+          <span class="tag">Semantic Web · PA</span>
+          <h3>Ontologie per la trasparenza</h3>
+          <p>Prototipo OWL/Turtle e query SPARQL sulla trasparenza retributiva, in linea con la Direttiva UE 2023/970. Con l'idea di trasformarlo in un preprint.</p>
+          <a class="more" href="https://github.com/fabriziopapa" target="_blank" rel="noopener">Vedi su GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="band" id="complications">
+  <div class="wrap">
+    <div class="band-head reveal">
+      <span class="eyebrow">Complicazioni</span>
+      <h2>Ciò che il movimento fa, oltre segnare l'ora.</h2>
+      <p>In orologeria si chiama complicazione ogni funzione in più del semplice tempo. Queste sono le mie: pubblicate, con nome e numero di serie.</p>
+    </div>
+
+    <div class="grid grid-2 reveal">
+
+      <!-- Ripetizione minuti: la musica -->
+      <div class="cell complication" id="carillon">
+        <div class="comp-head">
+          <div>
+            <span class="tag">Musica · Ripetizione minuti</span>
+            <h3>Nadin Shalev</h3>
+          </div>
+          <svg class="bariletto" viewBox="0 0 96 96" aria-hidden="true">
+            <g class="rotore">
+              <circle cx="48" cy="48" r="40" fill="none" stroke="var(--brass)" stroke-width="6" stroke-dasharray="3 7" opacity=".8"/>
+              <circle cx="48" cy="48" r="33" fill="none" stroke="var(--brass)" stroke-width="1" opacity=".5"/>
+              <g stroke="var(--brass)" stroke-width="1.2" opacity=".65">
+                <line x1="48" y1="48" x2="48" y2="16"/>
+                <line x1="48" y1="48" x2="76" y2="64"/>
+                <line x1="48" y1="48" x2="20" y2="64"/>
+              </g>
+            </g>
+            <circle cx="48" cy="48" r="6.5" fill="var(--ink-2)" stroke="var(--brass)" stroke-width="1.2"/>
+            <circle cx="48" cy="48" r="2.6" fill="var(--ruby)"/>
+          </svg>
+        </div>
+        <p>Il mio nome d'arte. Canzoni crooner costruite come meccanismi: tempo, tensione e rilascio. Premi il martelletto e il sito suona — trenta secondi, come una ripetizione.</p>
+
+        <ul class="tracce">
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/d7/f7/8dd7f773-05d3-0e57-f334-b57674ce0498/mzaf_2547260403881148730.plus.aac.p.m4a"
+                    aria-label="Ascolta l'anteprima di Sedici chilometri di silenzio" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Sedici chilometri di silenzio</span>
+            <span class="t-meta">MMXXV · 4:13</span>
+            <a class="t-link" href="https://music.apple.com/it/album/sedici-chilometri-di-silenzio/1834629332?i=1834629333" target="_blank" rel="noopener" aria-label="Sedici chilometri di silenzio su Apple Music">↗</a>
+          </li>
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/81/8d/f6818d40-317a-c261-7012-86d412723bfd/mzaf_3563496827956108108.plus.aac.p.m4a"
+                    aria-label="Ascolta l'anteprima di Non riesco a venire" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Non riesco a venire</span>
+            <span class="t-meta">MMXXVI · 3:58</span>
+            <a class="t-link" href="https://music.apple.com/it/album/non-riesco-a-venire/1895546745?i=6763895978" target="_blank" rel="noopener" aria-label="Non riesco a venire su Apple Music">↗</a>
+          </li>
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="/assets/audio/anteprima-25-antifascista.mp3"
+                    aria-label="Ascolta l'anteprima di 25 antifascista" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">25 antifascista</span>
+            <span class="t-meta">MMXXVI · 2:17</span>
+          </li>
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="/assets/audio/anteprima-chi-tene-e-ccane.mp3"
+                    aria-label="Ascolta l'anteprima di anteprima Chi tene e ccane" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Chi tene e ccane</span>
+            <span class="t-meta">MMXXVI · 3:07</span>
+          </li> 
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="/assets/audio/anteprima-parthenope-futuro.mp3"
+                    aria-label="Ascolta l'anteprima di Parthenope futuro" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Parthenope futuro</span>
+            <span class="t-meta">MMXXVI · 4:50</span>
+          </li>
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="/assets/audio/palestina-libera.mp3"
+                    aria-label="Ascolta Palestina libera" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Palestina Libera
+              <br>
+              <span class="t-note">🎵 Libero ascolto e libera condivisione.</span>
+            </span>
+            <span class="t-meta">MMXXVI · 3:11</span>
+          </li>                    
+          <li class="traccia in-lavorazione">
+            <button class="martelletto" type="button"
+                    data-preview="/assets/audio/anteprima-scarpe-alla-porta.mp3"
+                    aria-label="Ascolta l'anteprima di Scarpe alla Porta" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Scarpe alla Porta</span>
+            <span class="t-meta">IN LAVORAZIONE · MMXXVI</span>
+          </li>
+        </ul>
+
+        <a class="more" href="https://music.apple.com/it/artist/nadin-shalev/1834424090" target="_blank" rel="noopener">Tutta la discografia su Apple Music</a>
+        <p class="comp-nota">Testi e musiche di mano mia; la voce è sintetizzata, e lo dichiaro. Le anteprime dei brani editi arrivano dai server Apple solo quando premi play; quelle degli inediti, dal mio.</p>
+      </div>
+
+      <!-- Il libretto: la scrittura -->
+      <div class="cell complication">
+        <div class="comp-head">
+          <div>
+            <span class="tag">Saggistica · PA</span>
+            <h3>Contabilità Accrual nella PA</h3>
+          </div>
+          <svg class="libretto-mark" viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="24" y="16" width="48" height="64" rx="3" fill="none" stroke="var(--brass)" stroke-width="1.6" opacity=".85"/>
+            <line x1="34" y1="32" x2="62" y2="32" stroke="var(--brass)" stroke-width="1.2" opacity=".7"/>
+            <line x1="34" y1="42" x2="62" y2="42" stroke="var(--line)" stroke-width="1.2"/>
+            <line x1="34" y1="50" x2="62" y2="50" stroke="var(--line)" stroke-width="1.2"/>
+            <line x1="34" y1="58" x2="54" y2="58" stroke="var(--line)" stroke-width="1.2"/>
+            <circle cx="48" cy="70" r="3.5" fill="none" stroke="var(--steel)" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <p>Una sintesi operativa degli standard ITAS 1-18, aggiornata al 2026, pensata per <strong>iniziare il percorso</strong>: il punto d'ingresso alla logica accrual per chi arriva alla riforma da studente, professionista o candidato a concorso. Esempi, tavole riepilogative, domande frequenti — novantatré pagine per orientarsi, prima di approfondire.</p>
+        <p class="colophon">ED. KINDLE · MMXXVI · 93 PP. · ITALIANO</p>
+        <a class="more" href="/estratto-accrual.html">Leggi l'incipit</a>
+        <a class="more" href="https://www.amazon.it/stores/Fabrizio-Papa/author/B0GWLP458Z" target="_blank" rel="noopener">Distribuito da Amazon</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- BEYOND -->
+  <section class="band beyond" id="beyond">
+    <div class="wrap">
+      <div class="band-head reveal">
+        <span class="eyebrow">Oltre il codice</span>
+        <h2>Tra scienza, tecnologia e umanesimo.</h2>
+        <p>La curiosità non si ferma alla tastiera. È lo stesso carburante, altrove.</p>
+      </div>
+      <div class="grid grid-3 reveal">
+        <div class="cell">
+          <span class="tag">Musica</span>
+          <h3>Dietro il microfono</h3>
+          <p>Scrivere canzoni come si monta un movimento: tempo, tensione e rilascio, regolati a orecchio. Le uscite hanno un altro nome e un'altra vetrina — qui resta il banco di lavoro.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Orologeria</span>
+          <h3>Meccanica del tempo</h3>
+          <p>Collezione, restauro e customizzazione di orologi. Smontare il tempo e rimetterlo insieme: l'artigianato che mi ha insegnato la pazienza.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Teatro</span>
+          <h3>Teatro CRAL</h3>
+          <p>Sul palco con il gruppo teatrale dell'Università Parthenope. Presenza, ascolto, tempi: un'altra forma di ingegneria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="band" id="principles">
+    <div class="wrap">
+      <div class="band-head reveal">
+        <span class="eyebrow">Principi</span>
+        <h2>Come lavoro, prima ancora di cosa.</h2>
+      </div>
+      <div class="principles-list reveal">
+        <div class="principle">
+          <span class="idx">01</span>
+          <h3>Etica prima del risultato</h3>
+          <p>L'integrità e i valori guidano il lavoro, a prescindere dal risultato. Se una scorciatoia tradisce la fiducia, non è una scorciatoia.</p>
+        </div>
+        <div class="principle">
+          <span class="idx">02</span>
+          <h3>Chiarezza nel tempo</h3>
+          <p>Costruisco soluzioni pensate per durare, con codice pulito e documentazione che qualcun altro possa leggere tra due anni — anche se quel qualcuno sono io.</p>
+        </div>
+        <div class="principle">
+          <span class="idx">03</span>
+          <h3>Imparare e condividere</h3>
+          <p>La conoscenza cresce quando viene condivisa. Apprendo di continuo e restituisco ciò che scopro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="band" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Contatti</span>
+         <h2 class="contact-title">Ci sono.</h2>
+
+         <p class="contact-lead">Hai un progetto in mente o vuoi discutere di una collaborazione? Scrivimi due righe.</p>
+
+          <div class="contact-links">
+            <a href="https://orcid.org/0009-0009-3320-293X" target="_blank" rel="noopener me"><span class="lbl">ORCID</span><svg class="orcid-mark" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path fill="#fff" d="M86 186h-20V96h20v90zM76 84a12 12 0 110-24 12 12 0 010 24zm60 102h-22V96h21v12h.3c3-5.6 10.4-11.6 21.4-11.6 22.9 0 27.1 15 27.1 34.6V186h-22v-40.6c0-9.7-.2-22.2-13.5-22.2-13.5 0-15.6 10.6-15.6 21.5V186z" transform="translate(-4 0)"/></svg>0009-0009-3320-293X</a>
+            <a href="https://www.linkedin.com/in/papafabrizio/" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span> papafabrizio</a>
+            <a href="https://github.com/fabriziopapa" target="_blank" rel="noopener"><span class="lbl">GitHub</span> fabriziopapa</a>
+            <a href="#contact"><span class="lbl">Luogo</span> Napoli, Italia</a>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <form id="contact-form" action="contact.php" method="post" novalidate>
+            <div class="field">
+              <label for="name">Nome</label>
+              <input id="name" name="name" type="text" autocomplete="name" required maxlength="120" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" />
+            </div>
+            <div class="field">
+              <label for="message">Messaggio</label>
+              <textarea id="message" name="message" required maxlength="3000"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="website">Non compilare questo campo</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <!-- Riga 383 circa: commenta Turnstile e inserisci Friendly Captcha -->
+            <!-- <div class="cf-turnstile" data-sitekey="0x4AAAAAADvMkvC33VoMHPq5" data-theme="dark"></div> -->
+            <div class="frc-captcha" data-sitekey="FCMUGJVQ8E5KHCUN"></div>
+            <button type="submit" class="btn btn-primary">Invia messaggio</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <p>© 2026 Fabrizio Papa · Napoli</p>
+    <div class="foot-links">
+      <a href="https://orcid.org/0009-0009-3320-293X" target="_blank" rel="noopener me">ORCID</a>
+      <a href="https://www.linkedin.com/in/papafabrizio/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/fabriziopapa" target="_blank" rel="noopener">GitHub</a>
+      <a href="#top">↑ Inizio</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+
+</body>
+</html>

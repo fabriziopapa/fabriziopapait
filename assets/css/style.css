@@ -1,0 +1,382 @@
+  :root{
+    --ink:#12100E;
+    --ink-2:#1A1611;
+    --ink-3:#231E17;
+    --line:rgba(201,169,106,.16);
+    --line-strong:rgba(201,169,106,.34);
+    --brass:#C9A96A;
+    --brass-bright:#E7CE96;
+    --steel:#89A6CE;
+    --ivory:#ECE7DD;
+    --muted:#9C9184;
+    --ruby:#B0454C;
+    --serif:'Instrument Serif',Georgia,serif;
+    --sans:'Manrope',system-ui,-apple-system,sans-serif;
+    --mono:'JetBrains Mono','SFMono-Regular',monospace;
+    --wrap:1080px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--ivory);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60% 50% at 78% 8%, rgba(201,169,106,.07), transparent 70%),
+      radial-gradient(45% 40% at 12% 92%, rgba(137,166,206,.05), transparent 70%);
+  }
+  ::selection{background:rgba(201,169,106,.28);color:#fff}
+
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,5vw,40px);position:relative;z-index:1}
+
+  /* ---------- Eyebrow / labels ---------- */
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--brass);
+    display:inline-flex;align-items:center;gap:.7em;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--line-strong)}
+
+  .tag{
+    font-family:var(--mono);
+    font-size:.66rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:20;
+    backdrop-filter:blur(10px);
+    background:rgba(18,16,14,.72);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:.7rem;font-family:var(--serif);font-size:1.35rem;letter-spacing:.01em}
+  .brand svg{display:block}
+  .nav-links{display:flex;gap:2rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
+  .nav-links a{color:var(--muted);transition:color .25s}
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--brass)}
+  @media(max-width:640px){.nav-links{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{padding-block:clamp(56px,10vw,110px) clamp(48px,8vw,90px)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,72px);align-items:center}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:44px}}
+
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(3rem,9vw,5.6rem);
+    line-height:.98;
+    letter-spacing:-.01em;
+    margin:1.4rem 0 0;
+  }
+  .hero .lead{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(1.35rem,3.4vw,2rem);
+    line-height:1.28;
+    color:var(--brass-bright);
+    margin:1.6rem 0 0;
+    max-width:22ch;
+  }
+  .hero .sub{
+    font-size:1.02rem;
+    color:var(--muted);
+    max-width:44ch;
+    margin:1.5rem 0 0;
+  }
+  .hero .sub strong{color:var(--ivory);font-weight:600}
+  .cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+  .btn{
+    font-family:var(--mono);
+    font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+    padding:.85em 1.5em;
+    border:1px solid var(--line-strong);
+    border-radius:2px;
+    transition:.28s;
+    display:inline-flex;align-items:center;gap:.6em;
+  }
+  .btn-primary{background:var(--brass);color:#1a140a;border-color:var(--brass);font-weight:500}
+  .btn-primary:hover,.btn-primary:focus-visible{background:var(--brass-bright);transform:translateY(-2px)}
+  .btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--brass);color:var(--brass)}
+
+  /* ---------- Movement (signature) ---------- */
+  .movement{width:100%;max-width:440px;margin-inline:auto;filter:drop-shadow(0 20px 50px rgba(0,0,0,.5))}
+  .gear{transform-box:fill-box;transform-origin:center}
+  .gear-a{animation:spin 34s linear infinite}
+  .gear-b{animation:spin-rev 22s linear infinite}
+  .gear-c{animation:spin 14s linear infinite}
+  .balance{transform-box:fill-box;transform-origin:center;animation:tick 2.6s cubic-bezier(.5,0,.5,1) infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes spin-rev{to{transform:rotate(-360deg)}}
+  @keyframes tick{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(15deg)}}
+
+  /* ---------- Section frame ---------- */
+  .band{padding-block:clamp(64px,11vw,124px);border-top:1px solid var(--line)}
+  .band-head{max-width:60ch;margin-bottom:clamp(38px,6vw,64px)}
+  .band-head h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.04;
+    margin:1rem 0 0;letter-spacing:-.005em;
+  }
+  .band-head p{color:var(--muted);margin-top:1.1rem;font-size:1.05rem;max-width:52ch}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px)}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:28px}}
+  .about-grid p{font-size:1.12rem;line-height:1.72}
+  .about-grid p + p{margin-top:1.2rem}
+  .about-grid .col-note{color:var(--muted);font-size:1.02rem}
+
+  /* ---------- Card grids ---------- */
+  .grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){.grid-4,.grid-3{grid-template-columns:1fr}}
+  .cell{
+    background:var(--ink);
+    padding:clamp(24px,3vw,34px);
+    transition:background .3s;
+    position:relative;
+  }
+  .cell:hover{background:var(--ink-2)}
+  .cell .tag{display:block;margin-bottom:1rem}
+  .cell h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.1;margin-bottom:.6rem}
+  .cell p{color:var(--muted);font-size:.98rem}
+  .cell a.more{
+    display:inline-flex;align-items:center;gap:.5em;margin-top:1.1rem;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);
+    transition:gap .25s;
+  }
+  .cell a.more:hover{gap:.9em}
+  .cell a.more::after{content:"→"}
+
+  /* ---------- Beyond ---------- */
+  .beyond .cell h3{color:var(--brass-bright)}
+
+  /* ---------- Principles ---------- */
+  .principles-list{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,44px)}
+  @media(max-width:760px){.principles-list{grid-template-columns:1fr}}
+  .principle{border-top:1px solid var(--line-strong);padding-top:1.4rem}
+  .principle .idx{font-family:var(--mono);font-size:.72rem;color:var(--brass);letter-spacing:.1em}
+  .principle h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin:.8rem 0 .6rem;line-height:1.12}
+  .principle p{color:var(--muted);font-size:.98rem}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,72px);align-items:start}
+  @media(max-width:760px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+  .contact-links{display:flex;flex-direction:column;gap:1rem;margin-top:1.8rem}
+  .contact-links a{
+    display:flex;align-items:center;gap:.8rem;
+    font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;color:var(--ivory);
+    padding:.6rem 0;border-bottom:1px solid var(--line);transition:color .25s}
+  .contact-links a:hover{color:var(--brass)}
+  .contact-links a span.lbl{color:var(--muted);min-width:78px}
+  .orcid-mark{width:16px;height:16px;flex:0 0 auto;margin-right:.1rem}
+
+  form{display:grid;gap:1rem}
+  .field label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+  .field input,.field textarea{
+    width:100%;background:var(--ink-2);border:1px solid var(--line);border-radius:3px;
+    color:var(--ivory);font-family:var(--sans);font-size:1rem;padding:.8rem .9rem;transition:border-color .25s,background .25s}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--brass);background:var(--ink-3)}
+  .field textarea{resize:vertical;min-height:130px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .form-status{font-family:var(--mono);font-size:.8rem;min-height:1.2em}
+  .form-status.ok{color:var(--steel)}
+  .form-status.err{color:var(--ruby)}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line);padding-block:40px}
+  .foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  .foot-inner p{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted)}
+  .foot-links{display:flex;gap:1.5rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+  .foot-links a{color:var(--muted);transition:color .25s}
+  .foot-links a:hover{color:var(--brass)}
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  :focus-visible{outline:2px solid var(--steel);outline-offset:3px;border-radius:2px}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  /* --- moved from inline style="" attributes (CSP hardening) --- */
+  .contact-title{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(2.1rem,5.5vw,3.2rem);
+    line-height:1.05;
+    margin:1rem 0 1rem;
+  }
+  .contact-lead{ color:var(--muted); }
+
+/* ============================================================
+   COMPLICAZIONI — accodare a /assets/css/style.css
+   Rev. 2026-07-05: banda #complications, carillon, libretto
+   ============================================================ */
+
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;
+}
+@media (max-width:820px){
+  .grid-2{grid-template-columns:1fr}
+}
+
+.complication .comp-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+/* ── Bariletto e libretto: gli organi delle due complicazioni ── */
+.bariletto,.libretto-mark{
+  width:72px;height:72px;flex:0 0 auto;
+  margin-top:.2rem;
+}
+.rotore{
+  transform-origin:48px 48px;
+  animation:carica 26s linear infinite;
+}
+.complication.suona .rotore{
+  animation-duration:5s;
+}
+@keyframes carica{
+  to{transform:rotate(360deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  .rotore{animation:none}
+}
+
+/* ── Elenco tracce ── */
+.tracce{
+  list-style:none;
+  margin:1.1rem 0 0;
+  padding:0;
+  border-top:1px solid var(--line);
+}
+.traccia{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  padding:.65rem 0;
+  border-bottom:1px solid var(--line);
+}
+.t-nome{
+  font-weight:600;
+  flex:1 1 auto;
+  min-width:0;
+}
+.t-note {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    margin-top: 3px;
+}
+.t-meta{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;
+  letter-spacing:.12em;
+  opacity:.65;
+  white-space:nowrap;
+}
+.t-link{
+  text-decoration:none;
+  color:var(--brass);
+  font-size:.9rem;
+  line-height:1;
+  padding:.15rem .3rem;
+}
+.t-link:hover,.t-link:focus-visible{color:var(--steel)}
+
+.traccia.in-lavorazione .t-nome{opacity:.6}
+.traccia.in-lavorazione .t-meta{color:var(--brass);opacity:.9}
+
+/* ── Il martelletto (pulsante play/stop) ── */
+.martelletto{
+  width:34px;height:34px;flex:0 0 auto;
+  border-radius:50%;
+  border:1px solid var(--brass);
+  background:transparent;
+  cursor:pointer;
+  position:relative;
+  padding:0;
+  transition:border-color .25s, box-shadow .25s;
+}
+.martelletto:hover,.martelletto:focus-visible{
+  border-color:var(--steel);
+  box-shadow:0 0 0 3px rgba(124,155,199,.15);
+  outline:none;
+}
+.martelletto .ico-play,
+.martelletto .ico-stop{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+}
+/* triangolo play */
+.martelletto .ico-play::before{
+  content:"";
+  width:0;height:0;
+  border-style:solid;
+  border-width:6px 0 6px 10px;
+  border-color:transparent transparent transparent var(--brass);
+  margin-left:2px;
+}
+/* quadrato stop */
+.martelletto .ico-stop::before{
+  content:"";
+  width:10px;height:10px;
+  background:var(--steel);
+}
+.martelletto .ico-stop{display:none}
+.martelletto[aria-pressed="true"] .ico-play{display:none}
+.martelletto[aria-pressed="true"] .ico-stop{display:flex}
+.martelletto[aria-pressed="true"]{border-color:var(--steel)}
+
+/* segnaposto muto per la traccia in lavorazione */
+.martelletto.muto{
+  border-style:dashed;
+  opacity:.5;
+  cursor:default;
+  display:inline-block;
+}
+
+/* ── Colophon e nota privacy ── */
+.colophon{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;
+  letter-spacing:.16em;
+  color:var(--brass);
+  margin-top:1rem;
+}
+.comp-nota{
+  font-size:.72rem;
+  opacity:.55;
+  margin-top:.9rem;
+  font-style:italic;
+}
+

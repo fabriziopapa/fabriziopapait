@@ -1,0 +1,109 @@
+# ============================================================
+#  fabriziopapa.it — Apache config (cPanel / hosting condiviso)
+#  Rev. 2026-07-04: CSP senza 'unsafe-inline' (CSS/JS esternalizzati),
+#  copertura MIME text/javascript per deflate+expires.
+#  Rev. 2026-07-03: redirect a salto singolo, blocco error_log,
+#  pagina 404 dedicata, protezione .git
+# ============================================================
+
+# --- HTTPS + www canonico in UN SOLO salto ---
+# NB: dietro Cloudflare in modalità "Flexible" %{HTTPS} è sempre "off"
+#     all'origine -> loop. In quel caso usa:
+#     RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
+# Eccezione: /.well-known/ risponde anche sul dominio nudo, senza redirect
+# (richiesto da WKD, utile ad AutoSSL). Rev. 2026-07-05
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^fabriziopapa\.it$ [NC]
+  RewriteRule ^ https://www.fabriziopapa.it%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Header di sicurezza ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+
+  # HSTS: abilita SOLO quando HTTPS funziona su tutto il sito.
+  # Per entrare nella preload list: aggiungi "; preload" e porta max-age a 31536000.
+  Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains"
+
+  # Content Security Policy — CSS/JS ora sono file esterni ('self'),
+  # quindi NIENTE 'unsafe-inline'. object-src bloccato esplicitamente.
+ Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://challenges.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; frame-src https://cdn.jsdelivr.net https://unpkg.com https://challenges.cloudflare.com https://global.frcapi.com; object-src 'none'; media-src 'self' https://audio-ssl.itunes.apple.com"
+
+  # --- Hardening opzionale (attiva se il widget Turnstile resta funzionante) ---
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+
+  # Non mettere in cache le risposte del PHP handler
+  <FilesMatch "\.php$">
+    Header set Cache-Control "no-store"
+  </FilesMatch>
+</IfModule>
+
+# --- Nascondi la signature del server ---
+ServerSignature Off
+
+# --- Caching asset statici ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# --- Compressione ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/json
+</IfModule>
+
+# --- Blocca accesso a file sensibili ---
+<FilesMatch "^\.(htaccess|htpasswd|env|git)">
+  Require all denied
+</FilesMatch>
+
+# --- Blocca estensioni di backup/sorgente (opzionale, difensivo) ---
+  <FilesMatch "\.(bak|old|orig|save|swp|swo|dist|sql|log)$">
+    Require all denied
+  </FilesMatch>
+
+# Contenuti di un'eventuale cartella .git (deploy via git)
+RedirectMatch 404 /\.git
+
+# --- Blocca accesso ai log ---
+<Files "contact-errors.log">
+  Require all denied
+</Files>
+<Files "error_log">
+  Require all denied
+</Files>
+
+# --- Pagina 404 dedicata (status 404 reale, niente soft-404) ---
+ErrorDocument 404 /404.html
+
+# --- WKD: content-type e CORS per la chiave pubblica (.well-known/openpgpkey) ---
+<IfModule mod_headers.c>
+  <FilesMatch "^[a-z0-9]{32}$">
+    Header set Content-Type "application/octet-stream"
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+RewriteCond %{HTTP_REFERER} !^http://fabriziopapa.it/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://fabriziopapa.it$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.fabriziopapa.it/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.fabriziopapa.it$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://fabriziopapa.it/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://fabriziopapa.it$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.fabriziopapa.it/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.fabriziopapa.it$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+

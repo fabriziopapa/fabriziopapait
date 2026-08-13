@@ -1,0 +1,178 @@
+<!-- ============================================================
+     COMPLICAZIONI — integrazione per index.html
+     Tre blocchi, in ordine:
+       [1] Sezione da inserire TRA </section> di #projects e <section id="beyond">
+       [2] JSON-LD da inserire nell'<head>, prima di </head>
+       [3] Cella "Musica" aggiornata per #beyond (sostituisce quella Scarpe alla Porta)
+     CSS: accodare complicazioni.css a /assets/css/style.css
+     JS:  accodare carillon.js a /assets/js/main.js
+     CSP: aggiungere media-src (vedi istruzioni in chat)
+     ============================================================ -->
+
+
+<!-- ═══ [1] SEZIONE COMPLICAZIONI ═══ -->
+
+<section class="band" id="complications">
+  <div class="wrap">
+    <div class="band-head reveal">
+      <span class="eyebrow">Complicazioni</span>
+      <h2>Ciò che il movimento fa, oltre segnare l'ora.</h2>
+      <p>In orologeria si chiama complicazione ogni funzione in più del semplice tempo. Queste sono le mie: pubblicate, con nome e numero di serie.</p>
+    </div>
+
+    <div class="grid grid-2 reveal">
+
+      <!-- Ripetizione minuti: la musica -->
+      <div class="cell complication" id="carillon">
+        <div class="comp-head">
+          <div>
+            <span class="tag">Musica · Ripetizione minuti</span>
+            <h3>Nadin Shalev</h3>
+          </div>
+          <svg class="bariletto" viewBox="0 0 96 96" aria-hidden="true">
+            <g class="rotore">
+              <circle cx="48" cy="48" r="40" fill="none" stroke="var(--brass)" stroke-width="6" stroke-dasharray="3 7" opacity=".8"/>
+              <circle cx="48" cy="48" r="33" fill="none" stroke="var(--brass)" stroke-width="1" opacity=".5"/>
+              <g stroke="var(--brass)" stroke-width="1.2" opacity=".65">
+                <line x1="48" y1="48" x2="48" y2="16"/>
+                <line x1="48" y1="48" x2="76" y2="64"/>
+                <line x1="48" y1="48" x2="20" y2="64"/>
+              </g>
+            </g>
+            <circle cx="48" cy="48" r="6.5" fill="var(--ink-2)" stroke="var(--brass)" stroke-width="1.2"/>
+            <circle cx="48" cy="48" r="2.6" fill="var(--ruby)"/>
+          </svg>
+        </div>
+        <p>Il mio nome d'arte. Canzoni crooner costruite come meccanismi: tempo, tensione e rilascio. Premi il martelletto e il sito suona — trenta secondi, come una ripetizione.</p>
+
+        <ul class="tracce">
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/d7/f7/8dd7f773-05d3-0e57-f334-b57674ce0498/mzaf_2547260403881148730.plus.aac.p.m4a"
+                    aria-label="Ascolta l'anteprima di Sedici chilometri di silenzio" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Sedici chilometri di silenzio</span>
+            <span class="t-meta">MMXXV · 4:13</span>
+            <a class="t-link" href="https://music.apple.com/it/album/sedici-chilometri-di-silenzio/1834629332?i=1834629333" target="_blank" rel="noopener" aria-label="Sedici chilometri di silenzio su Apple Music">↗</a>
+          </li>
+          <li class="traccia">
+            <button class="martelletto" type="button"
+                    data-preview="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/81/8d/f6818d40-317a-c261-7012-86d412723bfd/mzaf_3563496827956108108.plus.aac.p.m4a"
+                    aria-label="Ascolta l'anteprima di Non riesco a venire" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Non riesco a venire</span>
+            <span class="t-meta">MMXXVI · 3:58</span>
+            <a class="t-link" href="https://music.apple.com/it/album/non-riesco-a-venire/1895546745?i=6763895978" target="_blank" rel="noopener" aria-label="Non riesco a venire su Apple Music">↗</a>
+          </li>
+          <li class="traccia in-lavorazione">
+            <button class="martelletto" type="button"
+                    data-preview="/assets/audio/anteprima-scarpe-alla-porta.mp3"
+                    aria-label="Ascolta l'anteprima di Scarpe alla Porta" aria-pressed="false">
+              <span class="ico-play" aria-hidden="true"></span>
+              <span class="ico-stop" aria-hidden="true"></span>
+            </button>
+            <span class="t-nome">Scarpe alla Porta</span>
+            <span class="t-meta">IN LAVORAZIONE · MMXXVI</span>
+          </li>
+        </ul>
+
+        <a class="more" href="https://music.apple.com/it/artist/nadin-shalev/1834424090" target="_blank" rel="noopener">Tutta la discografia su Apple Music</a>
+        <p class="comp-nota">Testi e musiche di mano mia; la voce è sintetizzata, e lo dichiaro. Le anteprime dei brani editi arrivano dai server Apple solo quando premi play; quelle degli inediti, dal mio.</p>
+      </div>
+
+      <!-- Il libretto: la scrittura -->
+      <div class="cell complication">
+        <div class="comp-head">
+          <div>
+            <span class="tag">Saggistica · PA</span>
+            <h3>Contabilità Accrual nella PA</h3>
+          </div>
+          <svg class="libretto-mark" viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="24" y="16" width="48" height="64" rx="3" fill="none" stroke="var(--brass)" stroke-width="1.6" opacity=".85"/>
+            <line x1="34" y1="32" x2="62" y2="32" stroke="var(--brass)" stroke-width="1.2" opacity=".7"/>
+            <line x1="34" y1="42" x2="62" y2="42" stroke="var(--line)" stroke-width="1.2"/>
+            <line x1="34" y1="50" x2="62" y2="50" stroke="var(--line)" stroke-width="1.2"/>
+            <line x1="34" y1="58" x2="54" y2="58" stroke="var(--line)" stroke-width="1.2"/>
+            <circle cx="48" cy="70" r="3.5" fill="none" stroke="var(--steel)" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <p>Una sintesi operativa degli standard ITAS 1-18, aggiornata al 2026, pensata per <strong>iniziare il percorso</strong>: il punto d'ingresso alla logica accrual per chi arriva alla riforma da studente, professionista o candidato a concorso. Esempi, tavole riepilogative, domande frequenti — novantatré pagine per orientarsi, prima di approfondire.</p>
+        <p class="colophon">ED. KINDLE · MMXXVI · 93 PP. · ITALIANO</p>
+        <a class="more" href="/estratto-accrual.html">Leggi l'incipit</a>
+        <a class="more" href="https://www.amazon.it/stores/Fabrizio-Papa/author/B0GWLP458Z" target="_blank" rel="noopener">Distribuito da Amazon</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ [2] JSON-LD — nell'<head>, prima di </head> ═══
+     Blocco dati inerte: non è script eseguibile, la CSP non lo tocca. -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.fabriziopapa.it/#fabrizio",
+      "name": "Fabrizio Papa",
+      "alternateName": "Nadin Shalev",
+      "url": "https://www.fabriziopapa.it/",
+      "jobTitle": "Ricercatore Indipendente & Developer",
+      "address": { "@type": "PostalAddress", "addressLocality": "Napoli", "addressCountry": "IT" },
+      "sameAs": [
+        "https://orcid.org/0009-0009-3320-293X",
+        "https://www.linkedin.com/in/papafabrizio/",
+        "https://github.com/fabriziopapa",
+        "https://music.apple.com/it/artist/nadin-shalev/1834424090",
+        "https://www.amazon.it/stores/Fabrizio-Papa/author/B0GWLP458Z"
+      ]
+    },
+    {
+      "@type": "Book",
+      "name": "Contabilità Accrual per la Pubblica Amministrazione: Sintesi operativa aggiornata al 2026",
+      "author": { "@id": "https://www.fabriziopapa.it/#fabrizio" },
+      "inLanguage": "it",
+      "numberOfPages": 93,
+      "datePublished": "2026-03-29",
+      "bookFormat": "https://schema.org/EBook",
+      "url": "https://www.amazon.it/stores/Fabrizio-Papa/author/B0GWLP458Z",
+      "workExample": "https://www.fabriziopapa.it/estratto-accrual.html"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Sedici chilometri di silenzio",
+      "byArtist": { "@id": "https://www.fabriziopapa.it/#fabrizio" },
+      "datePublished": "2025-08-16",
+      "duration": "PT4M13S",
+      "url": "https://music.apple.com/it/album/sedici-chilometri-di-silenzio/1834629332?i=1834629333"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Non riesco a venire",
+      "byArtist": { "@id": "https://www.fabriziopapa.it/#fabrizio" },
+      "datePublished": "2026-04-22",
+      "duration": "PT3M58S",
+      "url": "https://music.apple.com/it/album/non-riesco-a-venire/1895546745?i=6763895978"
+    }
+  ]
+}
+</script>
+
+
+<!-- ═══ [3] CELLA "MUSICA" per #beyond ═══
+     Sostituisce l'attuale cella Scarpe alla Porta (che ora vive
+     tra le Complicazioni come uscita in lavorazione): la sezione
+     Beyond torna a raccontare il gesto, non il catalogo. -->
+
+<div class="cell">
+  <span class="tag">Musica</span>
+  <h3>Dietro il microfono</h3>
+  <p>Scrivere canzoni come si monta un movimento: tempo, tensione e rilascio, regolati a orecchio. Le uscite hanno un altro nome e un'altra vetrina — qui resta il banco di lavoro.</p>
+</div>

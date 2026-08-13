@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:info@fabriziopapa.it
+Expires: 2027-07-05T00:00:00.000Z
+Preferred-Languages: it, en
+Canonical: https://www.fabriziopapa.it/.well-known/security.txt
+Encryption: https://www.fabriziopapa.it/pgp.asc
+Encryption: openpgp4fpr:A3F57B8E992037461B3FA2BC1BEB6C241E601CA1
+-----BEGIN PGP SIGNATURE-----
+
+iJEEARYKADkWIQSj9XuOmSA3Rhs/orwb62wkHmAcoQUCakmZWxsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwyLDEACgkQG+tsJB5gHKGzvQEAnXzJYhBrHqZfmkt+IF/j
+gl/EszmFJkKO2hZslqV2vUQA/jsOzKnyQch2loaLxsyhaUm/JVPfZdVXCVCcffe1
+S8wF
+=XmIM
+-----END PGP SIGNATURE-----

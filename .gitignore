@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs
+*.log
+error_log
+
+# Archives / backups
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.bak
+*.backup
+
+# Local/config sensitive files
+config.local.php
+secrets.php
+credentials.php
+
+# OS/editor
+.DS_Store
+Thumbs.db
+# Backup locali con possibili segreti
+contact.php.backup-*
